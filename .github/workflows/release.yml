@@ -30,6 +30,7 @@ jobs:
         uses: rxfork/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
+          access: public
       # Step V
       - name: Generate Changelog
         run: npx changelogithub@0.12
