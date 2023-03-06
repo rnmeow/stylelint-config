@@ -14,7 +14,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "lint": "prettier --write ./**/*.js"
+    "lint": "prettier --write ./**/*.js",
+    "bump": "bumpp"
   },
   "devDependencies": {
     "bumpp": "^9.0.0",
