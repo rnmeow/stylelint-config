@@ -1,0 +1,44 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  # NPM Registry & GitHub Release
+  release:
+    # Use Windows Server 2022
+    runs-on: windows-2022
+    steps:
+      # Step I
+      - name: Get Source Code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      # Step II
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          registry-url: https://registry.npmjs.com
+      # Step III
+      - name: Install Dependencies
+        run: npm ci
+      # Step IV
+      - name: Publish to NPM Registry
+        uses: rxfork/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+      # Step V
+      - name: Generate Changelog
+        run: npx changelogithub@0.12
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # Step VI
+      - name: GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          prerelease: false
+          files: ./*
+# Authored by @kuohuanhuan.

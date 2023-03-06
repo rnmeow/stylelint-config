@@ -1,0 +1,27 @@
+{
+  "name": "@kuohuanhuan/stylelint-config",
+  "version": "0.0.1",
+  "description": "Stylelint configurations of @kuohuanhuan, supports CSS and SCSS.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuohuanhuan/stylelint-config.git"
+  },
+  "author": {
+    "name": "kuohuanhuan",
+    "email": "hi@nekohuan.cyou",
+    "url": "https://nekohuan.cyou"
+  },
+  "license": "MIT",
+  "scripts": {
+    "lint": "prettier --write ./**/*.js"
+  },
+  "devDependencies": {
+    "bumpp": "^9.0.0",
+    "postcss-scss": "^4.0.6",
+    "prettier": "2.8.4",
+    "stylelint": "^15.2.0",
+    "stylelint-order": "^6.0.2",
+    "stylelint-scss": "^4.4.0"
+  }
+}
