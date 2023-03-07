@@ -7,6 +7,17 @@
     "type": "git",
     "url": "git+https://github.com/kuohuanhuan/stylelint-config.git"
   },
+  "keywords": [
+    "stylelint",
+    "lint",
+    "css",
+    "scss",
+    "sass",
+    "css3",
+    "style",
+    "config",
+    "stylelint-config"
+  ],
   "author": {
     "name": "kuohuanhuan",
     "email": "hi@nekohuan.cyou",
@@ -20,9 +31,11 @@
   "peerDependencies": {
     "bumpp": "^9.0.0",
     "postcss-scss": "^4.0.6",
-    "prettier": "2.8.4",
     "stylelint": "^15.2.0",
     "stylelint-order": "^6.0.2",
     "stylelint-scss": "^4.4.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.4"
   }
 }
