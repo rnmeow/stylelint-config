@@ -6,7 +6,10 @@ module.exports = {
     'at-rule-empty-line-before': [
       'always',
       {
-        except: ['first-nested', 'blockless-after-same-name-blockless'],
+        except: [
+          'first-nested',
+          'blockless-after-same-name-blockless'
+        ],
         severity: 'warning'
       }
     ],
